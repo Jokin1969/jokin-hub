@@ -11,8 +11,7 @@
             header_up X-Forwarded-Proto https
             header_up -X-Forwarded-Port
             header_up X-Forwarded-Port 443
-            header_down Location "https://{$RESEARCH_TOOLS_URL}:80" "/research"
-            header_down Location "https://{$RESEARCH_TOOLS_URL}" "/research"
+            header_down ~Location "^https?://[^/]+\.up\.railway\.app(?::\d+)?(.*)" "/research$1"
         }
     }
 
@@ -22,8 +21,7 @@
             header_up X-Forwarded-Proto https
             header_up -X-Forwarded-Port
             header_up X-Forwarded-Port 443
-            header_down Location "https://{$ANTIBUROCRATA_URL}:80" "/antiburocrata"
-            header_down Location "https://{$ANTIBUROCRATA_URL}" "/antiburocrata"
+            header_down ~Location "^https?://[^/]+\.up\.railway\.app(?::\d+)?(.*)" "/antiburocrata$1"
         }
     }
 
@@ -33,8 +31,7 @@
             header_up X-Forwarded-Proto https
             header_up -X-Forwarded-Port
             header_up X-Forwarded-Port 443
-            header_down Location "https://{$BROCHURES_URL}:80" "/brochures"
-            header_down Location "https://{$BROCHURES_URL}" "/brochures"
+            header_down ~Location "^https?://[^/]+\.up\.railway\.app(?::\d+)?(.*)" "/brochures$1"
         }
     }
 
@@ -44,8 +41,7 @@
             header_up X-Forwarded-Proto https
             header_up -X-Forwarded-Port
             header_up X-Forwarded-Port 443
-            header_down Location "https://{$PRION_SURVEY_URL}:80" "/survey"
-            header_down Location "https://{$PRION_SURVEY_URL}" "/survey"
+            header_down ~Location "^https?://[^/]+\.up\.railway\.app(?::\d+)?(.*)" "/survey$1"
         }
     }
 
@@ -55,8 +51,7 @@
             header_up X-Forwarded-Proto https
             header_up -X-Forwarded-Port
             header_up X-Forwarded-Port 443
-            header_down Location "https://{$PRIOCOHORT_URL}:80" "/priocohort"
-            header_down Location "https://{$PRIOCOHORT_URL}" "/priocohort"
+            header_down ~Location "^https?://[^/]+\.up\.railway\.app(?::\d+)?(.*)" "/priocohort$1"
         }
     }
 
@@ -66,8 +61,7 @@
             header_up X-Forwarded-Proto https
             header_up -X-Forwarded-Port
             header_up X-Forwarded-Port 443
-            header_down Location "https://{$JOKIN_TOOLS_URL}:80" "/tools"
-            header_down Location "https://{$JOKIN_TOOLS_URL}" "/tools"
+            header_down ~Location "^https?://[^/]+\.up\.railway\.app(?::\d+)?(.*)" "/tools$1"
         }
     }
 
@@ -77,8 +71,7 @@
             header_up X-Forwarded-Proto https
             header_up -X-Forwarded-Port
             header_up X-Forwarded-Port 443
-            header_down Location "https://{$CERTIFICADOS_URL}:80" "/certificados"
-            header_down Location "https://{$CERTIFICADOS_URL}" "/certificados"
+            header_down ~Location "^https?://[^/]+\.up\.railway\.app(?::\d+)?(.*)" "/certificados$1"
         }
     }
 
@@ -88,8 +81,7 @@
             header_up X-Forwarded-Proto https
             header_up -X-Forwarded-Port
             header_up X-Forwarded-Port 443
-            header_down Location "https://{$TXPR_URL}:80" "/txpr"
-            header_down Location "https://{$TXPR_URL}" "/txpr"
+            header_down ~Location "^https?://[^/]+\.up\.railway\.app(?::\d+)?(.*)" "/txpr$1"
         }
     }
 
@@ -99,8 +91,7 @@
             header_up X-Forwarded-Proto https
             header_up -X-Forwarded-Port
             header_up X-Forwarded-Port 443
-            header_down Location "https://{$PRIONLAB_URL}:80" "/prionlab"
-            header_down Location "https://{$PRIONLAB_URL}" "/prionlab"
+            header_down ~Location "^https?://[^/]+\.up\.railway\.app(?::\d+)?(.*)" "/prionlab$1"
         }
     }
 
@@ -110,8 +101,7 @@
             header_up X-Forwarded-Proto https
             header_up -X-Forwarded-Port
             header_up X-Forwarded-Port 443
-            header_down Location "https://{$DNI_URL}:80" "/dni"
-            header_down Location "https://{$DNI_URL}" "/dni"
+            header_down ~Location "^https?://[^/]+\.up\.railway\.app(?::\d+)?(.*)" "/dni$1"
         }
     }
 
@@ -121,8 +111,7 @@
             header_up X-Forwarded-Proto https
             header_up -X-Forwarded-Port
             header_up X-Forwarded-Port 443
-            header_down Location "https://{$WHATSAPP_FEEP_URL}:80" "/whatsapp-feep"
-            header_down Location "https://{$WHATSAPP_FEEP_URL}" "/whatsapp-feep"
+            header_down ~Location "^https?://[^/]+\.up\.railway\.app(?::\d+)?(.*)" "/whatsapp-feep$1"
         }
     }
 
@@ -132,8 +121,7 @@
             header_up X-Forwarded-Proto https
             header_up -X-Forwarded-Port
             header_up X-Forwarded-Port 443
-            header_down Location "https://{$ACTPRION_URL}:80" "/actprion"
-            header_down Location "https://{$ACTPRION_URL}" "/actprion"
+            header_down ~Location "^https?://[^/]+\.up\.railway\.app(?::\d+)?(.*)" "/actprion$1"
         }
     }
 
@@ -143,8 +131,7 @@
             header_up X-Forwarded-Proto https
             header_up -X-Forwarded-Port
             header_up X-Forwarded-Port 443
-            header_down Location "https://{$CLINICAL_SCALES_URL}:80" "/clinical-scales"
-            header_down Location "https://{$CLINICAL_SCALES_URL}" "/clinical-scales"
+            header_down ~Location "^https?://[^/]+\.up\.railway\.app(?::\d+)?(.*)" "/clinical-scales$1"
         }
     }
 
@@ -154,8 +141,7 @@
             header_up X-Forwarded-Proto https
             header_up -X-Forwarded-Port
             header_up X-Forwarded-Port 443
-            header_down Location "https://{$DONATION_URL}:80" "/donation"
-            header_down Location "https://{$DONATION_URL}" "/donation"
+            header_down ~Location "^https?://[^/]+\.up\.railway\.app(?::\d+)?(.*)" "/donation$1"
         }
     }
 
