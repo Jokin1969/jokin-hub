@@ -8,84 +8,126 @@
     handle_path /research/* {
         reverse_proxy https://{$RESEARCH_TOOLS_URL} {
             header_up Host {upstream_host}
+            header_up X-Forwarded-Proto https
+            header_up X-Forwarded-Port 443
+            header_down Location https://{$RESEARCH_TOOLS_URL} /research
         }
     }
 
     handle_path /antiburocrata/* {
         reverse_proxy https://{$ANTIBUROCRATA_URL} {
             header_up Host {upstream_host}
+            header_up X-Forwarded-Proto https
+            header_up X-Forwarded-Port 443
+            header_down Location https://{$ANTIBUROCRATA_URL} /antiburocrata
         }
     }
 
     handle_path /brochures/* {
         reverse_proxy https://{$BROCHURES_URL} {
             header_up Host {upstream_host}
+            header_up X-Forwarded-Proto https
+            header_up X-Forwarded-Port 443
+            header_down Location https://{$BROCHURES_URL} /brochures
         }
     }
 
     handle_path /survey/* {
         reverse_proxy https://{$PRION_SURVEY_URL} {
             header_up Host {upstream_host}
+            header_up X-Forwarded-Proto https
+            header_up X-Forwarded-Port 443
+            header_down Location https://{$PRION_SURVEY_URL} /survey
         }
     }
 
     handle_path /priocohort/* {
         reverse_proxy https://{$PRIOCOHORT_URL} {
             header_up Host {upstream_host}
+            header_up X-Forwarded-Proto https
+            header_up X-Forwarded-Port 443
+            header_down Location https://{$PRIOCOHORT_URL} /priocohort
         }
     }
 
     handle_path /tools/* {
         reverse_proxy https://{$JOKIN_TOOLS_URL} {
             header_up Host {upstream_host}
+            header_up X-Forwarded-Proto https
+            header_up X-Forwarded-Port 443
+            header_down Location https://{$JOKIN_TOOLS_URL} /tools
         }
     }
 
     handle_path /certificados/* {
         reverse_proxy https://{$CERTIFICADOS_URL} {
             header_up Host {upstream_host}
+            header_up X-Forwarded-Proto https
+            header_up X-Forwarded-Port 443
+            header_down Location https://{$CERTIFICADOS_URL} /certificados
         }
     }
 
     handle_path /txpr/* {
         reverse_proxy https://{$TXPR_URL} {
             header_up Host {upstream_host}
+            header_up X-Forwarded-Proto https
+            header_up X-Forwarded-Port 443
+            header_down Location https://{$TXPR_URL} /txpr
         }
     }
 
     handle_path /prionlab/* {
         reverse_proxy https://{$PRIONLAB_URL} {
             header_up Host {upstream_host}
+            header_up X-Forwarded-Proto https
+            header_up X-Forwarded-Port 443
+            header_down Location https://{$PRIONLAB_URL} /prionlab
         }
     }
 
     handle_path /dni/* {
         reverse_proxy https://{$DNI_URL} {
             header_up Host {upstream_host}
+            header_up X-Forwarded-Proto https
+            header_up X-Forwarded-Port 443
+            header_down Location https://{$DNI_URL} /dni
         }
     }
 
     handle_path /whatsapp-feep/* {
         reverse_proxy https://{$WHATSAPP_FEEP_URL} {
             header_up Host {upstream_host}
+            header_up X-Forwarded-Proto https
+            header_up X-Forwarded-Port 443
+            header_down Location https://{$WHATSAPP_FEEP_URL} /whatsapp-feep
         }
     }
 
     handle_path /actprion/* {
         reverse_proxy https://{$ACTPRION_URL} {
             header_up Host {upstream_host}
+            header_up X-Forwarded-Proto https
+            header_up X-Forwarded-Port 443
+            header_down Location https://{$ACTPRION_URL} /actprion
         }
     }
 
     handle_path /clinical-scales/* {
         reverse_proxy https://{$CLINICAL_SCALES_URL} {
             header_up Host {upstream_host}
+            header_up X-Forwarded-Proto https
+            header_up X-Forwarded-Port 443
+            header_down Location https://{$CLINICAL_SCALES_URL} /clinical-scales
         }
     }
 
     handle_path /donation/* {
         reverse_proxy https://{$DONATION_URL} {
             header_up Host {upstream_host}
+            header_up X-Forwarded-Proto https
+            header_up X-Forwarded-Port 443
+            header_down Location https://{$DONATION_URL} /donation
         }
     }
 
