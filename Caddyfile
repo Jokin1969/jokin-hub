@@ -9,8 +9,10 @@
         reverse_proxy https://{$RESEARCH_TOOLS_URL} {
             header_up Host {upstream_host}
             header_up X-Forwarded-Proto https
+            header_up -X-Forwarded-Port
             header_up X-Forwarded-Port 443
-            header_down Location https://{$RESEARCH_TOOLS_URL} /research
+            header_down Location "https://{$RESEARCH_TOOLS_URL}:80" "/research"
+            header_down Location "https://{$RESEARCH_TOOLS_URL}" "/research"
         }
     }
 
@@ -18,8 +20,10 @@
         reverse_proxy https://{$ANTIBUROCRATA_URL} {
             header_up Host {upstream_host}
             header_up X-Forwarded-Proto https
+            header_up -X-Forwarded-Port
             header_up X-Forwarded-Port 443
-            header_down Location https://{$ANTIBUROCRATA_URL} /antiburocrata
+            header_down Location "https://{$ANTIBUROCRATA_URL}:80" "/antiburocrata"
+            header_down Location "https://{$ANTIBUROCRATA_URL}" "/antiburocrata"
         }
     }
 
@@ -27,8 +31,10 @@
         reverse_proxy https://{$BROCHURES_URL} {
             header_up Host {upstream_host}
             header_up X-Forwarded-Proto https
+            header_up -X-Forwarded-Port
             header_up X-Forwarded-Port 443
-            header_down Location https://{$BROCHURES_URL} /brochures
+            header_down Location "https://{$BROCHURES_URL}:80" "/brochures"
+            header_down Location "https://{$BROCHURES_URL}" "/brochures"
         }
     }
 
@@ -36,8 +42,10 @@
         reverse_proxy https://{$PRION_SURVEY_URL} {
             header_up Host {upstream_host}
             header_up X-Forwarded-Proto https
+            header_up -X-Forwarded-Port
             header_up X-Forwarded-Port 443
-            header_down Location https://{$PRION_SURVEY_URL} /survey
+            header_down Location "https://{$PRION_SURVEY_URL}:80" "/survey"
+            header_down Location "https://{$PRION_SURVEY_URL}" "/survey"
         }
     }
 
@@ -45,8 +53,10 @@
         reverse_proxy https://{$PRIOCOHORT_URL} {
             header_up Host {upstream_host}
             header_up X-Forwarded-Proto https
+            header_up -X-Forwarded-Port
             header_up X-Forwarded-Port 443
-            header_down Location https://{$PRIOCOHORT_URL} /priocohort
+            header_down Location "https://{$PRIOCOHORT_URL}:80" "/priocohort"
+            header_down Location "https://{$PRIOCOHORT_URL}" "/priocohort"
         }
     }
 
@@ -54,8 +64,10 @@
         reverse_proxy https://{$JOKIN_TOOLS_URL} {
             header_up Host {upstream_host}
             header_up X-Forwarded-Proto https
+            header_up -X-Forwarded-Port
             header_up X-Forwarded-Port 443
-            header_down Location https://{$JOKIN_TOOLS_URL} /tools
+            header_down Location "https://{$JOKIN_TOOLS_URL}:80" "/tools"
+            header_down Location "https://{$JOKIN_TOOLS_URL}" "/tools"
         }
     }
 
@@ -63,8 +75,10 @@
         reverse_proxy https://{$CERTIFICADOS_URL} {
             header_up Host {upstream_host}
             header_up X-Forwarded-Proto https
+            header_up -X-Forwarded-Port
             header_up X-Forwarded-Port 443
-            header_down Location https://{$CERTIFICADOS_URL} /certificados
+            header_down Location "https://{$CERTIFICADOS_URL}:80" "/certificados"
+            header_down Location "https://{$CERTIFICADOS_URL}" "/certificados"
         }
     }
 
@@ -72,8 +86,10 @@
         reverse_proxy https://{$TXPR_URL} {
             header_up Host {upstream_host}
             header_up X-Forwarded-Proto https
+            header_up -X-Forwarded-Port
             header_up X-Forwarded-Port 443
-            header_down Location https://{$TXPR_URL} /txpr
+            header_down Location "https://{$TXPR_URL}:80" "/txpr"
+            header_down Location "https://{$TXPR_URL}" "/txpr"
         }
     }
 
@@ -81,8 +97,10 @@
         reverse_proxy https://{$PRIONLAB_URL} {
             header_up Host {upstream_host}
             header_up X-Forwarded-Proto https
+            header_up -X-Forwarded-Port
             header_up X-Forwarded-Port 443
-            header_down Location https://{$PRIONLAB_URL} /prionlab
+            header_down Location "https://{$PRIONLAB_URL}:80" "/prionlab"
+            header_down Location "https://{$PRIONLAB_URL}" "/prionlab"
         }
     }
 
@@ -90,8 +108,10 @@
         reverse_proxy https://{$DNI_URL} {
             header_up Host {upstream_host}
             header_up X-Forwarded-Proto https
+            header_up -X-Forwarded-Port
             header_up X-Forwarded-Port 443
-            header_down Location https://{$DNI_URL} /dni
+            header_down Location "https://{$DNI_URL}:80" "/dni"
+            header_down Location "https://{$DNI_URL}" "/dni"
         }
     }
 
@@ -99,8 +119,10 @@
         reverse_proxy https://{$WHATSAPP_FEEP_URL} {
             header_up Host {upstream_host}
             header_up X-Forwarded-Proto https
+            header_up -X-Forwarded-Port
             header_up X-Forwarded-Port 443
-            header_down Location https://{$WHATSAPP_FEEP_URL} /whatsapp-feep
+            header_down Location "https://{$WHATSAPP_FEEP_URL}:80" "/whatsapp-feep"
+            header_down Location "https://{$WHATSAPP_FEEP_URL}" "/whatsapp-feep"
         }
     }
 
@@ -108,8 +130,10 @@
         reverse_proxy https://{$ACTPRION_URL} {
             header_up Host {upstream_host}
             header_up X-Forwarded-Proto https
+            header_up -X-Forwarded-Port
             header_up X-Forwarded-Port 443
-            header_down Location https://{$ACTPRION_URL} /actprion
+            header_down Location "https://{$ACTPRION_URL}:80" "/actprion"
+            header_down Location "https://{$ACTPRION_URL}" "/actprion"
         }
     }
 
@@ -117,8 +141,10 @@
         reverse_proxy https://{$CLINICAL_SCALES_URL} {
             header_up Host {upstream_host}
             header_up X-Forwarded-Proto https
+            header_up -X-Forwarded-Port
             header_up X-Forwarded-Port 443
-            header_down Location https://{$CLINICAL_SCALES_URL} /clinical-scales
+            header_down Location "https://{$CLINICAL_SCALES_URL}:80" "/clinical-scales"
+            header_down Location "https://{$CLINICAL_SCALES_URL}" "/clinical-scales"
         }
     }
 
@@ -126,8 +152,10 @@
         reverse_proxy https://{$DONATION_URL} {
             header_up Host {upstream_host}
             header_up X-Forwarded-Proto https
+            header_up -X-Forwarded-Port
             header_up X-Forwarded-Port 443
-            header_down Location https://{$DONATION_URL} /donation
+            header_down Location "https://{$DONATION_URL}:80" "/donation"
+            header_down Location "https://{$DONATION_URL}" "/donation"
         }
     }
 
