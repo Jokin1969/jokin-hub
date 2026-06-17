@@ -5,20 +5,89 @@
 :{$PORT} {
     encode gzip
 
-    handle_path /research/*        { reverse_proxy {$RESEARCH_TOOLS_URL}  { header_up Host {upstream_hostport} } }
-    handle_path /antiburocrata/*   { reverse_proxy {$ANTIBUROCRATA_URL}   { header_up Host {upstream_hostport} } }
-    handle_path /brochures/*       { reverse_proxy {$BROCHURES_URL}       { header_up Host {upstream_hostport} } }
-    handle_path /survey/*          { reverse_proxy {$PRION_SURVEY_URL}    { header_up Host {upstream_hostport} } }
-    handle_path /priocohort/*      { reverse_proxy {$PRIOCOHORT_URL}      { header_up Host {upstream_hostport} } }
-    handle_path /tools/*           { reverse_proxy {$JOKIN_TOOLS_URL}     { header_up Host {upstream_hostport} } }
-    handle_path /certificados/*    { reverse_proxy {$CERTIFICADOS_URL}    { header_up Host {upstream_hostport} } }
-    handle_path /txpr/*            { reverse_proxy {$TXPR_URL}            { header_up Host {upstream_hostport} } }
-    handle_path /prionlab/*        { reverse_proxy {$PRIONLAB_URL}        { header_up Host {upstream_hostport} } }
-    handle_path /dni/*             { reverse_proxy {$DNI_URL}             { header_up Host {upstream_hostport} } }
-    handle_path /whatsapp-feep/*   { reverse_proxy {$WHATSAPP_FEEP_URL}   { header_up Host {upstream_hostport} } }
-    handle_path /actprion/*        { reverse_proxy {$ACTPRION_URL}        { header_up Host {upstream_hostport} } }
-    handle_path /clinical-scales/* { reverse_proxy {$CLINICAL_SCALES_URL} { header_up Host {upstream_hostport} } }
-    handle_path /donation/*        { reverse_proxy {$DONATION_URL}        { header_up Host {upstream_hostport} } }
+    handle_path /research/* {
+        reverse_proxy {$RESEARCH_TOOLS_URL} {
+            header_up Host {upstream_hostport}
+        }
+    }
+
+    handle_path /antiburocrata/* {
+        reverse_proxy {$ANTIBUROCRATA_URL} {
+            header_up Host {upstream_hostport}
+        }
+    }
+
+    handle_path /brochures/* {
+        reverse_proxy {$BROCHURES_URL} {
+            header_up Host {upstream_hostport}
+        }
+    }
+
+    handle_path /survey/* {
+        reverse_proxy {$PRION_SURVEY_URL} {
+            header_up Host {upstream_hostport}
+        }
+    }
+
+    handle_path /priocohort/* {
+        reverse_proxy {$PRIOCOHORT_URL} {
+            header_up Host {upstream_hostport}
+        }
+    }
+
+    handle_path /tools/* {
+        reverse_proxy {$JOKIN_TOOLS_URL} {
+            header_up Host {upstream_hostport}
+        }
+    }
+
+    handle_path /certificados/* {
+        reverse_proxy {$CERTIFICADOS_URL} {
+            header_up Host {upstream_hostport}
+        }
+    }
+
+    handle_path /txpr/* {
+        reverse_proxy {$TXPR_URL} {
+            header_up Host {upstream_hostport}
+        }
+    }
+
+    handle_path /prionlab/* {
+        reverse_proxy {$PRIONLAB_URL} {
+            header_up Host {upstream_hostport}
+        }
+    }
+
+    handle_path /dni/* {
+        reverse_proxy {$DNI_URL} {
+            header_up Host {upstream_hostport}
+        }
+    }
+
+    handle_path /whatsapp-feep/* {
+        reverse_proxy {$WHATSAPP_FEEP_URL} {
+            header_up Host {upstream_hostport}
+        }
+    }
+
+    handle_path /actprion/* {
+        reverse_proxy {$ACTPRION_URL} {
+            header_up Host {upstream_hostport}
+        }
+    }
+
+    handle_path /clinical-scales/* {
+        reverse_proxy {$CLINICAL_SCALES_URL} {
+            header_up Host {upstream_hostport}
+        }
+    }
+
+    handle_path /donation/* {
+        reverse_proxy {$DONATION_URL} {
+            header_up Host {upstream_hostport}
+        }
+    }
 
     handle {
         root * /site
