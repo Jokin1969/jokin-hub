@@ -178,6 +178,21 @@ main {
   padding-top: 0.5rem;
 }
 
+/* ── Subsections (within a section) ── */
+.subsection {
+  margin-bottom: 1.5rem;
+}
+
+.subsection-title {
+  font-size: 0.72rem;
+  font-weight: 600;
+  letter-spacing: 0.08em;
+  text-transform: uppercase;
+  color: var(--text-muted);
+  margin-bottom: 0.65rem;
+  padding-left: 0.1rem;
+}
+
 /* ── Footer ── */
 footer {
   text-align: center;
