@@ -21,7 +21,7 @@
 
   <main>
 
-    <!-- ── Investigación ── -->
+    <!-- ── Laboratorio de Priones ── -->
     <section class="section">
       <p class="section-title">Laboratorio de Priones</p>
       <div class="grid">
@@ -44,16 +44,73 @@
     <!-- ── Investigación clínica ── -->
     <section class="section">
       <p class="section-title">Investigación clínica</p>
+      <div class="grid" id="ic-grid">
 
-      <div class="subsection">
-        <p class="subsection-title">Consentimientos informados</p>
+        <div class="cat-card" data-panel="ic-consent">
+          <div class="card-icon">🖊️</div>
+          <div class="card-title">Consentimientos informados</div>
+          <span class="chevron">▼</span>
+        </div>
+
+        <div class="cat-card" data-panel="ic-bbdd">
+          <div class="card-icon">🗄️</div>
+          <div class="card-title">Bases de datos</div>
+          <span class="chevron">▼</span>
+        </div>
+
+        <div class="cat-card" data-panel="ic-seguimiento">
+          <div class="card-icon">📅</div>
+          <div class="card-title">Programas de seguimiento</div>
+          <span class="chevron">▼</span>
+        </div>
+
+        <div class="cat-card" data-panel="ic-escalas">
+          <div class="card-icon">📊</div>
+          <div class="card-title">Escalas clínicas</div>
+          <span class="chevron">▼</span>
+        </div>
+
+        <div class="cat-card" data-panel="ic-historia">
+          <div class="card-icon">🌿</div>
+          <div class="card-title">Historia natural</div>
+          <span class="chevron">▼</span>
+        </div>
+
+        <div class="cat-card" data-panel="ic-cuestionarios">
+          <div class="card-icon">📝</div>
+          <div class="card-title">Cuestionarios</div>
+          <span class="chevron">▼</span>
+        </div>
+
+        <div class="cat-card" data-panel="ic-donacion">
+          <div class="card-icon">🧬</div>
+          <div class="card-title">Donación de muestras</div>
+          <span class="chevron">▼</span>
+        </div>
+
+        <div class="cat-card" data-panel="ic-certificados">
+          <div class="card-icon">🏅</div>
+          <div class="card-title">Certificados de donación</div>
+          <span class="chevron">▼</span>
+        </div>
+
+        <div class="cat-card" data-panel="ic-otras">
+          <div class="card-icon">🔧</div>
+          <div class="card-title">Otras aplicaciones</div>
+          <span class="chevron">▼</span>
+        </div>
+
+      </div>
+
+      <!-- Panels -->
+      <div class="cat-panel" id="ic-consent">
         <div class="grid">
-          <a class="card" draggable="true" href="https://priocohort-ci-production.up.railway.app" target="_blank" rel="noopener">
+          <a class="card" href="https://priocohort-ci-production.up.railway.app" target="_blank" rel="noopener">
             <div class="card-icon">👥</div>
             <div class="card-title">PrioCohort</div>
             <div class="card-desc">Seguimiento y gestión de la cohorte de pacientes prión.</div>
           </a>
-          <a class="card" draggable="true" href="https://server-production-b16f.up.railway.app" target="_blank" rel="noopener">
+          <a class="card" href="https://server-production-b16f.up.railway.app" target="_blank" rel="noopener">
             <div class="card-icon">📋</div>
             <div class="card-title">Encuesta PRION</div>
             <div class="card-desc">Formulario de recogida de datos para el estudio PRION.</div>
@@ -61,10 +118,9 @@
         </div>
       </div>
 
-      <div class="subsection">
-        <p class="subsection-title">Bases de datos</p>
+      <div class="cat-panel" id="ic-bbdd">
         <div class="grid">
-          <a class="card" draggable="true" href="https://txpr-databases-production.up.railway.app" target="_blank" rel="noopener">
+          <a class="card" href="https://txpr-databases-production.up.railway.app" target="_blank" rel="noopener">
             <div class="card-icon">🗄️</div>
             <div class="card-title">Bases de Datos TXPR</div>
             <div class="card-desc">Consulta y gestión de las bases de datos del proyecto TXPR.</div>
@@ -72,10 +128,9 @@
         </div>
       </div>
 
-      <div class="subsection">
-        <p class="subsection-title">Programas de seguimiento</p>
+      <div class="cat-panel" id="ic-seguimiento">
         <div class="grid">
-          <a class="card" draggable="true" href="https://brochures-production-5c8c.up.railway.app" target="_blank" rel="noopener">
+          <a class="card" href="https://brochures-production-5c8c.up.railway.app" target="_blank" rel="noopener">
             <div class="card-icon">📄</div>
             <div class="card-title">Folletos Informativos</div>
             <div class="card-desc">Material de información para pacientes y familiares.</div>
@@ -83,10 +138,9 @@
         </div>
       </div>
 
-      <div class="subsection">
-        <p class="subsection-title">Escalas clínicas</p>
+      <div class="cat-panel" id="ic-escalas">
         <div class="grid">
-          <a class="card" draggable="true" href="https://clinical-rating-scales-production.up.railway.app" target="_blank" rel="noopener">
+          <a class="card" href="https://clinical-rating-scales-production.up.railway.app" target="_blank" rel="noopener">
             <div class="card-icon">📊</div>
             <div class="card-title">Escalas Clínicas</div>
             <div class="card-desc">Escalas de valoración clínica estandarizadas para uso en consulta.</div>
@@ -94,17 +148,15 @@
         </div>
       </div>
 
-      <div class="subsection">
-        <p class="subsection-title">Historia natural</p>
+      <div class="cat-panel" id="ic-historia">
         <div class="grid">
-          <!-- pendiente de añadir aplicación -->
+          <p style="color:var(--text-muted);font-size:0.85rem;padding:0.5rem 0;">Pendiente de añadir aplicación.</p>
         </div>
       </div>
 
-      <div class="subsection">
-        <p class="subsection-title">Cuestionarios</p>
+      <div class="cat-panel" id="ic-cuestionarios">
         <div class="grid">
-          <a class="card" draggable="true" href="https://cuestionario-prionico-production.up.railway.app" target="_blank" rel="noopener">
+          <a class="card" href="https://cuestionario-prionico-production.up.railway.app" target="_blank" rel="noopener">
             <div class="card-icon">📝</div>
             <div class="card-title">Cuestionario Priónico</div>
             <div class="card-desc">Evaluación de actividades y síntomas en enfermedades priónicas.</div>
@@ -112,10 +164,9 @@
         </div>
       </div>
 
-      <div class="subsection">
-        <p class="subsection-title">Donación de muestras</p>
+      <div class="cat-panel" id="ic-donacion">
         <div class="grid">
-          <a class="card" draggable="true" href="https://donation-instructions-production.up.railway.app" target="_blank" rel="noopener">
+          <a class="card" href="https://donation-instructions-production.up.railway.app" target="_blank" rel="noopener">
             <div class="card-icon">❤️</div>
             <div class="card-title">Donaciones</div>
             <div class="card-desc">Instrucciones y vías para apoyar la investigación del laboratorio.</div>
@@ -123,10 +174,9 @@
         </div>
       </div>
 
-      <div class="subsection">
-        <p class="subsection-title">Certificados de donación</p>
+      <div class="cat-panel" id="ic-certificados">
         <div class="grid">
-          <a class="card" draggable="true" href="https://generador-certificados-production-ac44.up.railway.app" target="_blank" rel="noopener">
+          <a class="card" href="https://generador-certificados-production-ac44.up.railway.app" target="_blank" rel="noopener">
             <div class="card-icon">🏅</div>
             <div class="card-title">Generador de Certificados</div>
             <div class="card-desc">Creación automática de certificados y documentos oficiales.</div>
@@ -134,10 +184,9 @@
         </div>
       </div>
 
-      <div class="subsection">
-        <p class="subsection-title">Otras aplicaciones</p>
+      <div class="cat-panel" id="ic-otras">
         <div class="grid">
-          <a class="card" draggable="true" href="https://dni-production.up.railway.app" target="_blank" rel="noopener">
+          <a class="card" href="https://dni-production.up.railway.app" target="_blank" rel="noopener">
             <div class="card-icon">🪪</div>
             <div class="card-title">Consulta DNI</div>
             <div class="card-desc">Herramienta de validación y consulta de datos de identidad.</div>
@@ -196,7 +245,26 @@
   </footer>
 
 <script>
-// Only on desktop (pointer device, no touch primary)
+// ── Category card accordion ──
+document.querySelectorAll('.cat-card').forEach(card => {
+  card.addEventListener('click', () => {
+    const panelId = card.dataset.panel;
+    const panel = document.getElementById(panelId);
+    const isOpen = panel.classList.contains('open');
+
+    // Close all panels and deactivate all cat-cards in this section
+    card.closest('.section').querySelectorAll('.cat-panel').forEach(p => p.classList.remove('open'));
+    card.closest('.section').querySelectorAll('.cat-card').forEach(c => c.classList.remove('active'));
+
+    if (!isOpen) {
+      panel.classList.add('open');
+      card.classList.add('active');
+      panel.scrollIntoView({ behavior: 'smooth', block: 'nearest' });
+    }
+  });
+});
+
+// ── Drag & drop (desktop only) ──
 if (window.matchMedia('(hover: hover) and (pointer: fine)').matches) {
   const STORE_KEY = 'jokin-hub-order';
   let dragSrc = null;
@@ -227,7 +295,7 @@ if (window.matchMedia('(hover: hover) and (pointer: fine)').matches) {
   }
 
   function initDrag() {
-    document.querySelectorAll('.card').forEach(card => {
+    document.querySelectorAll('.card[draggable="true"]').forEach(card => {
       card.addEventListener('dragstart', e => {
         dragSrc = card;
         card.classList.add('dragging');
