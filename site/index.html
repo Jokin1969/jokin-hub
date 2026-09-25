@@ -21,12 +21,8 @@
   </header>
 
   <main>
-
-    <!-- ── Laboratorio de Priones ── -->
-    <section class="section">
-      <h2 class="section-title">Laboratorio de Priones</h2>
+    <section class="section" data-order-key="main-tools" aria-label="Aplicaciones">
       <div class="grid">
-
         <a class="card" draggable="true" href="https://research-tools-production.up.railway.app" target="_blank" rel="noopener">
           <div class="card-icon">🔬</div>
           <div class="card-title">Research Tools</div>
@@ -39,10 +35,26 @@
           <div class="card-desc">Aplicación integral para la gestión de recursos basados en el conocimiento.</div>
         </a>
 
+        <a class="card" draggable="true" href="https://rincon-antiburocrata-production.up.railway.app" target="_blank" rel="noopener">
+          <div class="card-icon">📎</div>
+          <div class="card-title">Rincón Antiburocrata</div>
+          <div class="card-desc">Automatización de tareas administrativas y documentación.</div>
+        </a>
+
+        <a class="card" draggable="true" href="https://jokins-tools-production.up.railway.app" target="_blank" rel="noopener">
+          <div class="card-icon">🛠️</div>
+          <div class="card-title">Herramientas Jokin</div>
+          <div class="card-desc">Conjunto de herramientas de uso general del laboratorio.</div>
+        </a>
+
+        <a class="card" draggable="true" href="https://feep-production.up.railway.app/" target="_blank" rel="noopener">
+          <div class="card-icon">🤝</div>
+          <div class="card-title">FEEP</div>
+          <div class="card-desc">Accede al portal de la Fundación Española de Enfermedades Priónicas.</div>
+        </a>
       </div>
     </section>
 
-    <!-- ── Investigación clínica ── -->
     <section class="section">
       <h2 class="section-title">Investigación clínica</h2>
       <div class="grid" id="ic-grid">
@@ -161,49 +173,6 @@
 
 
     </section>
-
-    <!-- ── Adhocracia ── -->
-    <section class="section">
-      <h2 class="section-title">Adhocracia</h2>
-      <div class="grid">
-
-        <a class="card" draggable="true" href="https://rincon-antiburocrata-production.up.railway.app" target="_blank" rel="noopener">
-          <div class="card-icon">📎</div>
-          <div class="card-title">Rincón Antiburocrata</div>
-          <div class="card-desc">Automatización de tareas administrativas y documentación.</div>
-        </a>
-
-      </div>
-    </section>
-
-    <!-- ── Herramientas de Jokin ── -->
-    <section class="section">
-      <h2 class="section-title">Herramientas de Jokin</h2>
-      <div class="grid">
-
-        <a class="card" draggable="true" href="https://jokins-tools-production.up.railway.app" target="_blank" rel="noopener">
-          <div class="card-icon">🛠️</div>
-          <div class="card-title">Herramientas Jokin</div>
-          <div class="card-desc">Conjunto de herramientas de uso general del laboratorio.</div>
-        </a>
-
-      </div>
-    </section>
-
-
-
-    <!-- ── FEEP ── -->
-    <section class="section">
-      <h2 class="section-title">Fundación Española de Enfermedades Priónicas</h2>
-      <div class="grid">
-        <a class="card" draggable="true" href="https://feep-production.up.railway.app/" target="_blank" rel="noopener">
-          <div class="card-icon">🤝</div>
-          <div class="card-title">FEEP</div>
-          <div class="card-desc">Accede al portal de la Fundación Española de Enfermedades Priónicas.</div>
-        </a>
-      </div>
-    </section>
-
   </main>
 
   <footer>
@@ -239,7 +208,7 @@ if (window.matchMedia('(hover: hover) and (pointer: fine)').matches) {
   function saveOrder() {
     const order = {};
     document.querySelectorAll('.section').forEach(section => {
-      const id = section.querySelector('.section-title').textContent.trim();
+      const id = section.dataset.orderKey || section.querySelector('.section-title').textContent.trim();
       order[id] = [...section.querySelectorAll('.card')].map(c => c.href);
     });
     localStorage.setItem(STORE_KEY, JSON.stringify(order));
@@ -249,7 +218,7 @@ if (window.matchMedia('(hover: hover) and (pointer: fine)').matches) {
     const saved = JSON.parse(localStorage.getItem(STORE_KEY) || 'null');
     if (!saved) return;
     document.querySelectorAll('.section').forEach(section => {
-      const id = section.querySelector('.section-title').textContent.trim();
+      const id = section.dataset.orderKey || section.querySelector('.section-title').textContent.trim();
       const hrefs = saved[id];
       if (!hrefs) return;
       const grid = section.querySelector('.grid');
