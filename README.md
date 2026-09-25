@@ -1,6 +1,6 @@
 # Jokin Hub
 
-Portal de acceso a 11 aplicaciones del laboratorio, organizadas por áreas y categorías. Las aplicaciones se abren en una pestaña nueva desde sus enlaces directos.
+Portal de acceso a 12 aplicaciones, organizadas por áreas y categorías, incluido el portal de la Fundación Española de Enfermedades Priónicas (FEEP). Las aplicaciones se abren en una pestaña nueva desde sus enlaces directos.
 
 ## Diseño
 
