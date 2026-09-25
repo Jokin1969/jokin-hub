@@ -12,18 +12,19 @@
 <body>
 
   <header>
+    <p class="eyebrow">CIENCIA · CONOCIMIENTO · HERRAMIENTAS</p>
     <div class="logo">
       <div class="logo-icon">🧪</div>
       <h1>Jokin's <span>Hub</span></h1>
     </div>
-    <p>Conjunto de aplicaciones con una gran diversidad de funcionalidades</p>
+    <p>Tu espacio de trabajo para investigar, conectar y avanzar.</p>
   </header>
 
   <main>
 
     <!-- ── Laboratorio de Priones ── -->
     <section class="section">
-      <p class="section-title">Laboratorio de Priones</p>
+      <h2 class="section-title">Laboratorio de Priones</h2>
       <div class="grid">
 
         <a class="card" draggable="true" href="https://research-tools-production.up.railway.app" target="_blank" rel="noopener">
@@ -43,56 +44,45 @@
 
     <!-- ── Investigación clínica ── -->
     <section class="section">
-      <p class="section-title">Investigación clínica</p>
+      <h2 class="section-title">Investigación clínica</h2>
       <div class="grid" id="ic-grid">
 
-        <div class="cat-card" data-panel="ic-consent">
-          <div class="card-icon">🖊️</div>
-          <div class="card-title">Consentimientos informados</div>
-          <span class="chevron">▼</span>
-        </div>
+        <button type="button" class="cat-card" data-panel="ic-consent" aria-controls="ic-consent" aria-expanded="false">
+          <span class="card-icon">🖊️</span>
+          <span class="card-title">Consentimientos informados</span>
+          <span class="chevron">▼</span></button>
 
-        <div class="cat-card" data-panel="ic-bbdd">
-          <div class="card-icon">🗄️</div>
-          <div class="card-title">Bases de datos</div>
-          <span class="chevron">▼</span>
-        </div>
+        <button type="button" class="cat-card" data-panel="ic-bbdd" aria-controls="ic-bbdd" aria-expanded="false">
+          <span class="card-icon">🗄️</span>
+          <span class="card-title">Bases de datos</span>
+          <span class="chevron">▼</span></button>
 
-        <div class="cat-card" data-panel="ic-seguimiento">
-          <div class="card-icon">📅</div>
-          <div class="card-title">Programas de seguimiento</div>
-          <span class="chevron">▼</span>
-        </div>
+        <button type="button" class="cat-card" data-panel="ic-seguimiento" aria-controls="ic-seguimiento" aria-expanded="false">
+          <span class="card-icon">📅</span>
+          <span class="card-title">Programas de seguimiento</span>
+          <span class="chevron">▼</span></button>
 
-        <div class="cat-card" data-panel="ic-escalas">
-          <div class="card-icon">📊</div>
-          <div class="card-title">Escalas clínicas</div>
-          <span class="chevron">▼</span>
-        </div>
+        <button type="button" class="cat-card" data-panel="ic-escalas" aria-controls="ic-escalas" aria-expanded="false">
+          <span class="card-icon">📊</span>
+          <span class="card-title">Escalas clínicas</span>
+          <span class="chevron">▼</span></button>
 
-        <div class="cat-card" data-panel="ic-historia">
-          <div class="card-icon">🌿</div>
-          <div class="card-title">Historia natural</div>
-          <span class="chevron">▼</span>
-        </div>
+        <button type="button" class="cat-card" data-panel="ic-historia" aria-controls="ic-historia" aria-expanded="false">
+          <span class="card-icon">🌿</span>
+          <span class="card-title">Historia natural</span>
+          <span class="chevron">▼</span></button>
 
-        <div class="cat-card" data-panel="ic-cuestionarios">
-          <div class="card-icon">📝</div>
-          <div class="card-title">Cuestionarios</div>
-          <span class="chevron">▼</span>
-        </div>
+        <button type="button" class="cat-card" data-panel="ic-cuestionarios" aria-controls="ic-cuestionarios" aria-expanded="false">
+          <span class="card-icon">📝</span>
+          <span class="card-title">Cuestionarios</span>
+          <span class="chevron">▼</span></button>
 
-        <div class="cat-card" data-panel="ic-donacion">
-          <div class="card-icon">🧬</div>
-          <div class="card-title">Donación de muestras</div>
-          <span class="chevron">▼</span>
-        </div>
+        <button type="button" class="cat-card" data-panel="ic-donacion" aria-controls="ic-donacion" aria-expanded="false">
+          <span class="card-icon">🧬</span>
+          <span class="card-title">Donación de muestras</span>
+          <span class="chevron">▼</span></button>
 
-<div class="cat-card" data-panel="ic-otras">
-          <div class="card-icon">🔧</div>
-          <div class="card-title">Otras aplicaciones</div>
-          <span class="chevron">▼</span>
-        </div>
+
 
       </div>
 
@@ -165,29 +155,16 @@
             <div class="card-title">Donaciones</div>
             <div class="card-desc">Instrucciones y vías para apoyar la investigación del laboratorio.</div>
           </a>
-          <a class="card" href="https://generador-certificados-production-ac44.up.railway.app" target="_blank" rel="noopener">
-            <div class="card-icon">🏅</div>
-            <div class="card-title">Generador de Certificados</div>
-            <div class="card-desc">Creación automática de certificados y documentos oficiales.</div>
-          </a>
         </div>
       </div>
 
-      <div class="cat-panel" id="ic-otras">
-        <div class="grid">
-          <a class="card" href="https://dni-production.up.railway.app" target="_blank" rel="noopener">
-            <div class="card-icon">🪪</div>
-            <div class="card-title">Consulta DNI</div>
-            <div class="card-desc">Herramienta de validación y consulta de datos de identidad.</div>
-          </a>
-        </div>
-      </div>
+
 
     </section>
 
     <!-- ── Adhocracia ── -->
     <section class="section">
-      <p class="section-title">Adhocracia</p>
+      <h2 class="section-title">Adhocracia</h2>
       <div class="grid">
 
         <a class="card" draggable="true" href="https://rincon-antiburocrata-production.up.railway.app" target="_blank" rel="noopener">
@@ -201,7 +178,7 @@
 
     <!-- ── Herramientas de Jokin ── -->
     <section class="section">
-      <p class="section-title">Herramientas de Jokin</p>
+      <h2 class="section-title">Herramientas de Jokin</h2>
       <div class="grid">
 
         <a class="card" draggable="true" href="https://jokins-tools-production.up.railway.app" target="_blank" rel="noopener">
@@ -213,19 +190,7 @@
       </div>
     </section>
 
-    <!-- ── Fundación Española de Enfermedades Priónicas ── -->
-    <section class="section">
-      <p class="section-title">Fundación Española de Enfermedades Priónicas</p>
-      <div class="grid">
 
-        <a class="card" draggable="true" href="https://whatsapp-feep-production.up.railway.app" target="_blank" rel="noopener">
-          <div class="card-icon">💬</div>
-          <div class="card-title">WhatsApp FEEP</div>
-          <div class="card-desc">Canal de comunicación con pacientes y familias vía WhatsApp.</div>
-        </a>
-
-      </div>
-    </section>
 
   </main>
 
@@ -243,12 +208,13 @@ document.querySelectorAll('.cat-card').forEach(card => {
 
     // Close all panels and deactivate all cat-cards in this section
     card.closest('.section').querySelectorAll('.cat-panel').forEach(p => p.classList.remove('open'));
-    card.closest('.section').querySelectorAll('.cat-card').forEach(c => c.classList.remove('active'));
+    card.closest('.section').querySelectorAll('.cat-card').forEach(c => { c.classList.remove('active'); c.setAttribute('aria-expanded', 'false'); });
 
     if (!isOpen) {
       panel.classList.add('open');
       card.classList.add('active');
-      panel.scrollIntoView({ behavior: 'smooth', block: 'nearest' });
+      card.setAttribute('aria-expanded', 'true');
+      panel.scrollIntoView({ behavior: window.matchMedia('(prefers-reduced-motion: reduce)').matches ? 'auto' : 'smooth', block: 'nearest' });
     }
   });
 });
